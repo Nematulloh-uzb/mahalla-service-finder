@@ -1,6 +1,6 @@
 import React from 'react'
 
-const categories = ["All", "Sartarosh", "Elektrik", "Oshxona", "Payvandchi"];
+const categories = ["All", "Dasturchi", "Elektrik", "Oshxona", "Payvandchi"];
 
 function CategoryFilter({ setCategory }) {
   return (

@@ -35,6 +35,15 @@ const services = [
     rating: 4.6,
     desc: "Temir eshik va darvoza ishlari",
   },
+  {
+    id: 5,
+    name: "Ne'matulloh Mansurov",
+    category: "Dasturchi",
+    phone: "+998958526002",
+    location: "Namangan Shaxar",
+    rating: 4.9,
+    desc: "Har xil UI, web saytlar qurish",
+  },
 ];
 
 export default services;
