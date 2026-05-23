@@ -7,9 +7,6 @@ import SearchBar from "../components/SearchBar";
 import CategoryFilter from "../components/CategoryFilter";
 
 function Home() {
-    const [search, setSearch] = useState("");
-    const [category, setCategory] = useState("All");
-
     const filtered = services.filter((s) => {
         const matchSearch =
             s.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -17,7 +14,8 @@ function Home() {
             s.location.toLowerCase().includes(search.toLowerCase());
 
         const matchCategory =
-            category === "All" || s.category === category;
+            category === "All" ||
+            s.category.trim().toLowerCase() === category.trim().toLowerCase();
 
         return matchSearch && matchCategory;
     });
