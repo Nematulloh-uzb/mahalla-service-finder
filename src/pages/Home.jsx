@@ -5,7 +5,6 @@ import SearchBar from "../components/SearchBar";
 import CategoryFilter from "../components/CategoryFilter";
 
 function Home() {
-    // 1. Statelarni shu yerda e'lon qilamiz
     const [search, setSearch] = useState("");
     const [category, setCategory] = useState("All");
 
@@ -27,11 +26,9 @@ function Home() {
             <h1 className="header">🏡 Mahalla Service Finder</h1>
             <p className="sub">Yaqin atrofdagi ustalarni toping</p>
 
-            {/* 2. Komponentlarga statelarni va ularni o'zgartiruvchi funksiyalarni uzating */}
             <SearchBar search={search} setSearch={setSearch} />
             <CategoryFilter category={category} setCategory={setCategory} />
 
-            {/* Bu yerda filtered massivini map qilib chiqarasiz */}
             <div className="grid">
                 {filtered.map(service => (
                     <ServiceCard key={service.id} service={service} />
