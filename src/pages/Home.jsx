@@ -30,9 +30,13 @@ function Home() {
             <CategoryFilter category={category} setCategory={setCategory} />
 
             <div className="grid">
-                {filtered.map(service => (
-                    <ServiceCard key={service.id} service={service} />
-                ))}
+                {filtered.length > 0 ? (
+                    filtered.map(service => (
+                        <ServiceCard key={service.id} service={service} />
+                    ))
+                ) : (
+                    <p>❌ Hech qanday xizmat topilmadi</p>
+                )}
             </div>
         </div>
     );
